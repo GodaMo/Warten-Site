@@ -83,17 +83,11 @@ Description : Site d'un Animateur Web
 | Description		 		|		INT	      |     NULL	   |	Oui	   |
 | ArticleHTML    			|		INT	      |     NULL	   |	Oui	   |
 | Traduction    			|     	INT	      |     NULL	   |	Oui	   |
-| Publicaton    			|      	BOOL      |      0		   |		   |
+| Publication    			|      	BOOL      |      0		   |		   |
 | Priorité		    		|      	INT       |     		   |		   |
 | Mot de recherche			|		TEXT 	  |				   |		   |
 
 | TRADUCTION    |	TYPE		  |		Valeur     |	PK     |
-| ------------- | -------------   | ---------      | --------- |
-| ID	        |    INT (AI)	  |  	           |		   |
-| Langue        |     VARCHAR 	  |      5	 	   |		   |
-| Traduction    |      TEXT  	  |     		   |		   |
-
-| CONTENU	    |	TYPE		  |		Valeur     |	PK     |
 | ------------- | -------------   | ---------      | --------- |
 | ID	        |    INT (AI)	  |  	           |		   |
 | Langue        |     VARCHAR 	  |      5	 	   |		   |
