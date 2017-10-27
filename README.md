@@ -26,7 +26,7 @@ Description : Site d'un Animateur Web
 ### Base de donnée
 
 
-#### User
+#### Utilisateur
 | UTILISATEUR   |	TYPE		  |		Valeur     |	PK     |
 | ------------- | -------------   | ---------      | --------- |
 | ID	        |     INT (AI)	  |  	           |		   |
@@ -36,6 +36,7 @@ Description : Site d'un Animateur Web
 | Droit		    |     INT	      |     NULL	   |	Oui	   |
 | Profil 		|     INT	      |     NULL	   |	Oui	   |
 | Paramètre		|     INT	      |     NULL	   |	Oui	   |
+
 
 
 #### Profil
@@ -86,7 +87,7 @@ Description : Site d'un Animateur Web
 | ARTICLES	    			|	TYPE		  |		Valeur     |	PK     |
 | ------------- 			| -------------   | ---------      | --------- |
 | ID	        			|    INT (AI)	  |  	           |		   |
-| Auteur        			|      	INT	      |     NULL	   |	Oui	   |
+| Auteur	      			|      	INT	      |     NULL	   |	Oui	   |
 | Date de création  		|     	Date	  |     	 	   |		   |
 | Date de modification  	|     	Date	  |     	 	   |		   |
 | Titre		    			|		INT	      |     NULL	   |	Oui	   |
@@ -112,3 +113,23 @@ Description : Site d'un Animateur Web
 | Langue        |     VARCHAR 	  |      5	 	   |		   |
 | Traduction    |      TEXT  	  |     		   |		   |
 
+#### Message
+| Message   					|	TYPE		  |		Valeur     |	PK     |
+| ------------- 				| -------------   | ---------      | --------- |
+| ID	        				|     INT (AI)	  |  	           |		   |
+| Propriétaire  				|     INT	      |     NULL	   |	Oui	   |
+| Destinataire  				|     INT	      |     NULL	   |	Oui	   |
+| Message   			    	|     TEXT  	  |         	   |		   |
+| Date d'envoie 				|     Date        |          	   |		   |
+| Date de reception 			|     Date        |          	   |		   |
+| Date de Modification   		|      TEXT  	  |     		   |		   |	
+
+#### Commentaire
+| Commentaire   				|	TYPE		  |		Valeur     |	PK     |
+| ------------- 				| -------------   | ---------      | --------- |
+| ID	        				|     INT (AI)	  |  	           |		   |
+| Propriétaire  				|     INT	      |     NULL	   |	Oui	   |
+| Destinataire  				|     INT	      |     NULL	   |	Oui	   |
+| Message   			    	|     TEXT  	  |         	   |		   |
+| Date de creation 				|     Date        |          	   |		   |
+| Date de Modification   		|      TEXT  	  |     		   |		   |	
