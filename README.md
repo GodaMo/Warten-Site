@@ -47,7 +47,7 @@ Description : Site d'un Animateur Web
 | Bio	        	|     TEXT   	  |         	   |		   |
 | Image de profil   |     TEXT   	  |     		   |		   |
 | Profil de Joueur	|     INT	      |     NULL	   |	Oui	   |
-
+| Lien				|     INT	      |     NULL	   |	Oui	   |
 
 #### Profil de Joueur
 | PROFIL JOUEUR    	|	TYPE		  |		Valeur     |	PK     |
@@ -57,6 +57,14 @@ Description : Site d'un Animateur Web
 | Plateforme	    |     VARCHAR  	  |     255  	   |		   |
 | Temps de jeux     |     INT   	  |     		   |		   |
 | Vos préférences  	|     INT	      |     NULL	   |	Oui	   |
+
+#### Lien
+
+| Lien  	    	|	TYPE		  |		Valeur     |	PK     |
+| ------------- 	| -------------   | ---------      | --------- |
+| ID	       		|     INT (AI)	  |  	           |		   |
+| Réseaux        	|     TEXT  	  |    	    	   |		   |
+| Lien           	|     TEXT  	  |    	    	   |		   |
 
 #### Paramètre
 | PARAMETRE	    	|	TYPE		  |		Valeur     |	PK     |
@@ -75,18 +83,19 @@ Description : Site d'un Animateur Web
 | Priorité      |      INT  	  |     		   |		   |
 
 #### Article
-| ARTICLES	    		|	TYPE		  |		Valeur     |	PK     |
-| ------------- 		| -------------   | ---------      | --------- |
-| ID	        		|    INT (AI)	  |  	           |		   |
-| Auteur        		|      	INT	      |     NULL	   |	Oui	   |
-| Date de création  	|     	Date	  |     	 	   |		   |
-| Date de modification  |     	Date	  |     	 	   |		   |
-| Titre		    		|		INT	      |     NULL	   |	Oui	   |
-| Description		    |		INT	      |     NULL	   |	Oui	   |
-| ArticleHTML    		|		INT	      |     NULL	   |	Oui	   |
-| Traduction    		|     	INT	      |     NULL	   |	Oui	   |
-| Publicaton    		|      	BOOL      |      0		   |		   |
-| Priorité		    	|      	INT       |     		   |		   |
+| ARTICLES	    			|	TYPE		  |		Valeur     |	PK     |
+| ------------- 			| -------------   | ---------      | --------- |
+| ID	        			|    INT (AI)	  |  	           |		   |
+| Auteur        			|      	INT	      |     NULL	   |	Oui	   |
+| Date de création  		|     	Date	  |     	 	   |		   |
+| Date de modification  	|     	Date	  |     	 	   |		   |
+| Titre		    			|		INT	      |     NULL	   |	Oui	   |
+| Description		 		|		INT	      |     NULL	   |	Oui	   |
+| ArticleHTML    			|		INT	      |     NULL	   |	Oui	   |
+| Traduction    			|     	INT	      |     NULL	   |	Oui	   |
+| Publicaton    			|      	BOOL      |      0		   |		   |
+| Priorité		    		|      	INT       |     		   |		   |
+| Mot de recherche			|		TEXT 	  |				   |		   |
 
 
 #### Traduction
