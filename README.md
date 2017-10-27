@@ -28,7 +28,6 @@ Description : Site d'un Animateur Web
 ![](https://image.noelshack.com/fichiers/2017/43/5/1509121350-sans-titre.png)
 
 ### Aspect Graphique
-
-Couleur :  ![](https://image.noelshack.com/fichiers/2017/43/5/1509123547-couleur.jpg)
+![](https://image.noelshack.com/fichiers/2017/43/5/1509123547-couleur.jpg)
 
 
