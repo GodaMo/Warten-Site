@@ -52,7 +52,7 @@ Description : Site d'un Animateur Web
 | Jeux				|     TEXT   	  |         	   |		   |
 | Plateforme	    |     VARCHAR  	  |     255  	   |		   |
 | Temps de jeux     |     INT   	  |     		   |		   |
-| Vos préférences  	|     INT	      |     NULL	   |	Oui	   |
+| Vos préférences  	|     TEXT	      |     		   |		   |
 
 | Lien  	    	|	TYPE		  |		Valeur     |	PK     |
 | ------------- 	| -------------   | ---------      | --------- |
