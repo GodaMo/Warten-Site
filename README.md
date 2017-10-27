@@ -25,8 +25,6 @@ Description : Site d'un Animateur Web
 
 ### Base de donnée
 
-
-#### Utilisateur
 | UTILISATEUR   |	TYPE		  |		Valeur     |	PK     |
 | ------------- | -------------   | ---------      | --------- |
 | ID	        |     INT (AI)	  |  	           |		   |
@@ -38,8 +36,6 @@ Description : Site d'un Animateur Web
 | Paramètre		|     INT	      |     NULL	   |	Oui	   |
 
 
-
-#### Profil
 | PROFIL	    	|	TYPE		  |		Valeur     |	PK     |
 | ------------- 	| -------------   | ---------      | --------- |
 | ID	       		|     INT (AI)	  |  	           |		   |
@@ -50,7 +46,6 @@ Description : Site d'un Animateur Web
 | Profil de Joueur	|     INT	      |     NULL	   |	Oui	   |
 | Lien				|     INT	      |     NULL	   |	Oui	   |
 
-#### Profil de Joueur
 | PROFIL JOUEUR    	|	TYPE		  |		Valeur     |	PK     |
 | ------------- 	| -------------   | ---------      | --------- |
 | ID	       		|     INT (AI)	  |  	           |		   |
@@ -59,31 +54,25 @@ Description : Site d'un Animateur Web
 | Temps de jeux     |     INT   	  |     		   |		   |
 | Vos préférences  	|     INT	      |     NULL	   |	Oui	   |
 
-#### Lien
-
 | Lien  	    	|	TYPE		  |		Valeur     |	PK     |
 | ------------- 	| -------------   | ---------      | --------- |
 | ID	       		|     INT (AI)	  |  	           |		   |
 | Réseaux        	|     TEXT  	  |    	    	   |		   |
 | Lien           	|     TEXT  	  |    	    	   |		   |
 
-#### Paramètre
 | PARAMETRE	    	|	TYPE		  |		Valeur     |	PK     |
 | ------------- 	| -------------   | ---------      | --------- |
 | ID	       		|     INT (AI)	  |  	           |		   |
 | Date de création  |     Date		  |         	   |		   |
 | Desactivation    	|     BOOL   	  |       0  	   |		   |
 | Verification	    |     BOOL   	  |       0		   |		   |
-| Suppression    	|     BOOL	      |       0 	   |		   |
 
-#### Droit
 | DROIT         |	TYPE		  |		Valeur     |	PK     |
 | ------------- | -------------   | ---------      | --------- |
 | ID	        |    INT (AI)	  |  	           |		   |
 | Nom           |	   INT	      |     NULL	   |	Oui	   |
 | Priorité      |      INT  	  |     		   |		   |
 
-#### Article
 | ARTICLES	    			|	TYPE		  |		Valeur     |	PK     |
 | ------------- 			| -------------   | ---------      | --------- |
 | ID	        			|    INT (AI)	  |  	           |		   |
@@ -98,22 +87,18 @@ Description : Site d'un Animateur Web
 | Priorité		    		|      	INT       |     		   |		   |
 | Mot de recherche			|		TEXT 	  |				   |		   |
 
-
-#### Traduction
 | TRADUCTION    |	TYPE		  |		Valeur     |	PK     |
 | ------------- | -------------   | ---------      | --------- |
 | ID	        |    INT (AI)	  |  	           |		   |
 | Langue        |     VARCHAR 	  |      5	 	   |		   |
 | Traduction    |      TEXT  	  |     		   |		   |
 
-#### Contenu
 | CONTENU	    |	TYPE		  |		Valeur     |	PK     |
 | ------------- | -------------   | ---------      | --------- |
 | ID	        |    INT (AI)	  |  	           |		   |
 | Langue        |     VARCHAR 	  |      5	 	   |		   |
 | Traduction    |      TEXT  	  |     		   |		   |
 
-#### Message
 | Message   					|	TYPE		  |		Valeur     |	PK     |
 | ------------- 				| -------------   | ---------      | --------- |
 | ID	        				|     INT (AI)	  |  	           |		   |
@@ -124,7 +109,6 @@ Description : Site d'un Animateur Web
 | Date de reception 			|     Date        |          	   |		   |
 | Date de Modification   		|      TEXT  	  |     		   |		   |	
 
-#### Commentaire
 | Commentaire   				|	TYPE		  |		Valeur     |	PK     |
 | ------------- 				| -------------   | ---------      | --------- |
 | ID	        				|     INT (AI)	  |  	           |		   |
@@ -133,3 +117,8 @@ Description : Site d'un Animateur Web
 | Message   			    	|     TEXT  	  |         	   |		   |
 | Date de creation 				|     Date        |          	   |		   |
 | Date de Modification   		|      TEXT  	  |     		   |		   |	
+
+
+
+#### Design du site
+
