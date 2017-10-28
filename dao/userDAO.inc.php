@@ -16,12 +16,39 @@ class userDAO extends DAO {
 		$req->execute(); 
 		return $this->cursorToObjectArray($req);
 	}
+	public function get_user_by_id($id){
+		$req = $this-> prepare("SELECT * FROM user WHERE user_id=$id");
+		$req->execute();
+		return $this->cursorToArrayNonObject($req);
+	}
 
-	public function get_user_By_PK(){ 
-		$req = $this-> prepare("SELECT FROM user  WHERE  $this->_user_id, $this->_user_pseudo, $this->_user_pass, $this->_user_mail, $this->_user_droitPK, $this->_user_profilPK, $this->_user_parametrePK $this->_user_id = :X_user_id");
-		$req->BindParam(":X_user_id",$user_id);
-		$req->exectute(); 
+	public function delete_user($id){ 
+		$req = $this-> prepare("DELETE  FROM user  WHERE  user_id = $id");
+		$req->execute();
+		return $req;
+	}
+	public function update_user($user){ 
+		$req = $this-> prepare("UPDATE  user  SET user_id = :X_id,user_pseudo= :X_user_pseudo,user_pass = :X_user_pass, user_mail = :X_user_mail,user_droitPK = :X_user_droitPK,user_profilPK = :X_user_profilPK,user_parametrePK = :X_user_parametrePK WHERE  user_id = :X_id");
+		$req->bindValue(':X_id', $user->get_user_id());
+		$req->bindValue(':X_user_pseudo',$user->get_user_pseudo());
+		$req->bindValue(':X_user_pass',$user->get_user_pass());
+		$req->bindValue(':X_user_mail',$user->get_user_mail());
+		$req->bindValue(':X_user_droitPK',$user->get_user_droitPK());
+		$req->bindValue(':X_user_profilPK',$user->get_user_profilPK());
+		$req->bindValue(':X_user_parametrePK',$user->get_user_parametrePK());
+		$req->execute();
 		return $this->cursorToObject($req);
+	}
+	public function insert_user($user){ 
+		$req = $this-> prepare("INSERT INTO  user (user_id,user_pseudo, user_pass, user_mail,user_droitPK,user_profilPK,user_parametrePK) VALUES (:X_id, :X_user_pseudo, :X_user_pass,:X_user_mail,:X_user_droitPK,:X_user_profilPK,:X_user_parametrePK)");
+		$req->bindValue(':X_id', $user->get_user_id());
+		$req->bindValue(':X_user_pseudo',$user->get_user_pseudo());
+		$req->bindValue(':X_user_pass',$user->get_user_pass());
+		$req->bindValue(':X_user_mail',$user->get_user_mail());
+		$req->bindValue(':X_user_droitPK',$user->get_user_droitPK());
+		$req->bindValue(':X_user_profilPK',$user->get_user_profilPK());
+		$req->bindValue(':X_user_parametrePK',$user->get_user_parametrePK());
+		return $req;
 	}
 }
 

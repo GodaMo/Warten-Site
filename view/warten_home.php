@@ -1,3 +1,3 @@
 <?php 
-include_once('../controller/config/daoController.php');
+include_once('../controller/test/AllTestDAO.php');
  ?>

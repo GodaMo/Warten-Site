@@ -12,11 +12,29 @@ class lienDAO extends DAO {
 		$req->execute(); 
 		return $this->cursorToObjectArray($req);
 	}
-
-	public function get_lien_By_PK(){ 
-		$req = $this-> prepare("SELECT FROM lien  WHERE  $this->_lien_id, $this->_lien_nom, $this->_lien_adresse $this->_lien_id = :X_lien_id");
-		$req->BindParam(":X_lien_id",$lien_id);
-		$req->exectute(); 
+	public function get_lien_by_id($id){
+		$req = $this-> prepare("SELECT * FROM lien WHERE lien_id=$id");
+		$req->execute();
+		return $this->cursorToArrayNonObject($req);
+	}
+	public function delete_lien($id){ 
+		$req = $this-> prepare("DELETE  FROM lien  WHERE  lien_id = $id");
+		$req->execute();
+		return $req;
+	}
+	public function update_lien($lien){ 
+		$req = $this-> prepare("UPDATE  lien  SET lien_id = :X_id,lien_nom= :X_lien_nom,lien_adresse = :X_lien_adresse WHERE  lien_id = :X_id");
+		$req->bindValue(':X_id', $lien->get_lien_id());
+		$req->bindValue(':X_lien_nom',$lien->get_lien_nom());
+		$req->bindValue(':X_lien_adresse',$lien->get_lien_adresse());
+		$req->execute();
+		return $this->cursorToObject($req);
+	}
+	public function insert_lien($lien){
+		$req = $this-> prepare("INSERT INTO  lien (lien_id,lien_nom, lien_adresse) VALUES (:X_id, :X_lien_nom, :X_lien_adresse)");
+		$req->bindValue(':X_id', $lien->get_lien_id());
+		$req->bindValue(':X_lien_nom',$lien->get_lien_nom());
+		$req->bindValue(':X_lien_adresse',$lien->get_lien_adresse());
 		return $this->cursorToObject($req);
 	}
 }
