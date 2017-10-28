@@ -24,3 +24,5 @@ class userDAO extends DAO {
 		return $this->cursorToObject($req);
 	}
 }
+
+?>
