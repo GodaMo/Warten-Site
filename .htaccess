@@ -1,0 +1,22 @@
+Options -Indexes
+
+RewriteEngine On
+
+#Accés autorisé
+RewriteRule	^home$	view/warten_home.php
+RewriteRule	^news$	view/warten_news.php
+RewriteRule	^tv$	view/warten_tv.php
+RewriteRule	^partenership$	view/warten_sponsor.php
+RewriteRule	^contact$	view/warten_contact.php
+RewriteRule	^search$	view/warten_search.php
+
+#Accés restreint
+RewriteRule	^article/([0-9]+)$	view/warten_article.php?articleid=$1
+RewriteRule	^dashboard$	view/warten_dashboard.php
+RewriteRule	^profil$	view/warten_profil.php
+RewriteRule	^settings$	view/warten_setting.php
+RewriteRule	^edit/article/$	view/warten_editarticle.php
+RewriteRule ^connect$ view/warten_connexion.php
+RewriteRule ^signin$ view/warten_inscription.php
+RewriteRule	^profil/([0-9a-zA-Z]+)$	view/warten_profil.php?id=$1
+
